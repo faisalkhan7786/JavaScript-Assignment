@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Next 20 leap year</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td> <input type="text" name="a" id="first" placeholder="Enter a year" /> </td>
+        </tr>
+        <tr>
+            <td> <button onclick="next ()">Submit</button></td>
+        </tr>
+    </table>
+    <div id="num">
+        <ul>
+
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function next() {
+        var year, count = 20;
+        year = document.getElementById("first").value;
+
+        while (count > 0) {
+            if (year % 4 == 0 && (year % 100 !== 0) || (year % 400 === 0)) {
+                document.write(year);
+                document.write("<br>");
+                year++;
+                count--;
+            }
+            else {
+                year++;
+            }
+        }
+    }
+</script>
+
+</html>
